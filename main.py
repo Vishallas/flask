@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 from flask import Flask, jsonify,request
+import os
 app = Flask(__name__)
 #import os
 
@@ -17,4 +18,4 @@ def index():
                     #'email': f'{email}'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
