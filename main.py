@@ -11,7 +11,7 @@ def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 @app.route('/name')
-def index():
+def nam():
     name = request.args.get('name')
     #email = request.args.get('email')
     return jsonify({'name': f'{name}'})
